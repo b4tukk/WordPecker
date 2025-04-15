@@ -1,84 +1,124 @@
-# WordPecker Mobile Challenge
+WordMaster Web Challenge
+📚 Hakkında
+Bu proje, WordPecker isimli kelime öğrenme uygulamasının web tabanlı versiyonunu geliştirmek üzere hazırlanmış bir ekip çalışması projesidir. Uygulama Next.js, TypeScript ve Tailwind CSS teknolojileriyle geliştirilmiştir. Amaç, kullanıcıların kendi kelime listeleriyle etkili bir şekilde öğrenme ve tekrar yapmalarını sağlayan kişiselleştirilmiş bir deneyim sunmaktır.
 
-## About
+🌟 Proje Özeti
+WordPecker Web, kullanıcıların kendi içeriklerinden (kitaplar, makaleler, vs.) kelimeler çıkararak öğrenmelerini ve bu kelimeleri test etmelerini sağlar.
 
-This is a challenge project for a 10-person team to develop a mobile version of the WordPecker language learning app using React Native with Expo. The project is based on the original web version of WordPecker, which helps users learn new vocabulary in context.
+Uygulamanın sunduğu başlıca özellikler:
 
-## Project Overview
+Kelime listeleri oluşturma ve yönetme
 
-WordPecker Mobile is a personalized language-learning app that brings the magic of Duolingo-style lessons to your own curated vocabulary lists and contexts. This app allows users to:
+Öğrenme modülü ile kelime çalışmaları
 
-1. Create word lists from content they're consuming (books, articles, etc.)
-2. Learn these words through interactive exercises 
-3. Test knowledge with quizzes
-4. Track progress and build vocabulary effectively
+Quiz modülü ile testler
 
-## Challenge Description
+Kaydedilen kelimeleri tekrar etme
 
-This repository contains a starter project with placeholder screens for 10 core features and 2 additional innovative features to be decided by the team. Your challenge is to implement these features within 2 weeks.
+Kullanıcı ilerlemesini takip etme
 
-### Core Features:
+Sesli komut ve okuma desteği
 
-1. **User Authentication** - Login/Registration system
-2. **Word Lists** - View all your vocabulary lists
-3. **Create List** - Add a new vocabulary list
-4. **Add Words** - Add words to existing lists
-5. **Learning Mode** - Practice exercises with your words
-6. **Quiz Mode** - Test your knowledge of learned words
-7. **List Details** - View and manage list content
-8. **Progress Tracking** - Monitor your learning status
-9. **Search** - Find words and lists
-10. **Settings** - Manage app preferences
+🧩 Temel Özellikler
+Kullanıcı Girişi – Giriş ve kayıt sistemi (/login)
 
-### Innovative Features:
+Dashboard – Öğrenme durumunun genel görünümü
 
-The team is expected to create 2 additional innovative features that leverage mobile capabilities to enhance the language learning experience.
+Kelime Listeleri – Kelimeleri listeler hâlinde yönetme
 
-## Getting Started
+Öğrenme Modu – Etkileşimli kelime çalışmaları
 
-1. Clone the repository
-2. Install dependencies with `npm install` or `yarn install`
-3. Start the app with `npm start` or `yarn start`
-4. Use Expo Go on your mobile device to test the app by scanning the QR code
-5. Explore the placeholder screens for features to be implemented
+Quiz Modu – Kelimeleri test etme
 
-## Development Guidelines
+Kaydedilen Kelimeler – Zor/unutulmaması gereken kelimeleri tekrar etme
 
-- Each team member should take ownership of at least one feature
-- The authentication system should be built from scratch
-- Code should be well-documented and follow best practices
-- Features should be implemented with a consistent UI/UX approach
-- Regular code reviews and team meetings are encouraged
+Ayarlar – Uygulama tercihlerini düzenleme
 
-## Project Structure
+Mobil Destek – Mobil cihazlar için optimize edilmiş arayüz
 
-```
-WordPecker/
-├── assets/              # App icons and images
-├── src/
-│   ├── api/             # API service and data fetching
-│   ├── components/      # Reusable UI components
-│   ├── context/         # React Context providers (e.g., AuthContext)
-│   ├── hooks/           # Custom React hooks
-│   ├── navigation/      # Navigation configuration
-│   ├── screens/         # Main app screens
-│   │   ├── auth/        # Authentication screens
-│   │   ├── features/    # Feature screens
-│   │   └── placeholders/# Placeholder screens for development
-│   ├── services/        # Business logic services
-│   ├── styles/          # Styling and theme
-│   ├── types/           # TypeScript type definitions
-│   └── utils/           # Utility functions
-└── App.tsx              # Main app component
-```
+Ses Özellikleri – Sesle tanıma ve metin okuma entegrasyonu
 
-## Evaluation Criteria
+Toast Bildirimleri – Kullanıcıya hızlı görsel geri bildirim
 
-- Feature completeness and functionality
-- Code quality and organization
-- User experience and interface design
-- Innovative use of mobile capabilities
-- Performance optimization
-- Team collaboration and integration
+🚀 Başlarken
+Depoyu klonlayın
 
-Good luck and happy coding!
+Bağımlılıkları yükleyin:
+
+bash
+Kopyala
+Düzenle
+npm install
+# veya
+yarn install
+Geliştirme sunucusunu başlatın:
+
+bash
+Kopyala
+Düzenle
+npm run dev
+# veya
+yarn dev
+Tarayıcıda http://localhost:3000 adresini açın
+
+📁 Proje Yapısı
+perl
+Kopyala
+Düzenle
+wordpecker/
+├── app/                   # Uygulama sayfaları (Next.js App Router)
+│   ├── dashboard/         # Ana sayfa / genel görünüm
+│   ├── learn/             # Öğrenme modülü
+│   ├── lists/             # Kelime listeleri
+│   ├── login/             # Giriş ve kayıt
+│   ├── quiz/              # Quiz sayfası
+│   ├── settings/          # Ayarlar
+│   ├── layout.tsx         # Genel layout bileşeni
+│   └── page.tsx           # Uygulama giriş noktası
+│
+├── components/
+│   └── ui/                # Tekrar kullanılabilir arayüz bileşenleri
+│       ├── app-layout.tsx
+│       ├── saved-words.tsx
+│       ├── theme-provider.tsx
+│       ├── vocabulary-manager.tsx
+│       └── word-list.tsx
+│
+├── hooks/                 # Özel React hook'ları
+│   ├── use-mobile.tsx
+│   ├── use-speech-recognition.ts
+│   ├── use-speech-synthesis.ts
+│   └── use-toast.ts
+│
+├── lib/                   # Yardımcı fonksiyonlar ve veri araçları
+│   ├── data-utils.ts
+│   └── utils.ts
+│
+├── public/                # Statik dosyalar (görseller, simgeler)
+├── styles/                # Global stil dosyaları
+│   └── globals.css
+├── tailwind.config.ts     # Tailwind CSS yapılandırması
+├── next.config.mjs        # Next.js yapılandırması
+├── tsconfig.json          # TypeScript yapılandırması
+└── package.json           # Proje tanımı ve script'ler
+✅ Geliştirme Kuralları
+Her ekip üyesi en az bir özelliği üstlenmeli
+
+Hook yapısı kullanılarak tekrar edilebilir işlevler izole edilmeli
+
+UI bileşenleri sade ve tutarlı bir tasarımla hazırlanmalı
+
+TypeScript aktif olarak kullanılmalı ve tip güvenliği korunmalı
+
+Kodlar okunabilir, dökümante edilmiş ve yeniden kullanılabilir olmalı
+
+📝 Değerlendirme Kriterleri
+Özelliklerin eksiksiz ve işlevsel olması
+
+Kod kalitesi ve modüler yapı
+
+Mobil uyumluluk ve kullanıcı deneyimi
+
+Sesli özelliklerin yaratıcı kullanımı
+
+Takım çalışması ve entegrasyon başarısı
